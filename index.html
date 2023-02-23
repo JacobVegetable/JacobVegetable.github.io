@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>FAQ</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
     <a href="#" class="togglefaq"><i class="icon-plus"></i> How do you tell an introverted computer scientist from an extroverted computer scientist?</a>
@@ -31,67 +32,67 @@
    </div>
 
 <style type="text/css">
-	* {
-  box-sizing: border-box;
-}
-.faqanswer {
-	display: none;
-	width: 590px;
-	background: #e5e5e5;
-	padding: 12px 20px 0 30px;	
-}
+		* {
+	  box-sizing: border-box;
+	}
+	.faqanswer {
+		display: none;
+		width: 590px;
+		background: #e5e5e5;
+		padding: 12px 20px 0 30px;	
+	}
 
-.faqanswer p {
-	font-size: 13px;
-	line-height: 17px;	
-}
+	.faqanswer p {
+		font-size: 13px;
+		line-height: 17px;	
+	}
 
 
-a.active {
-	font-weight: bold;
-}
+	a.active {
+		font-weight: bold;
+	}
 
-.togglefaq {
-	text-decoration: none;
-	color: #333;
-	font-size: 13px;
-	padding: 10px 30px;
-	line-height: 20px;
-	display: block;
-	border: 1px solid #d0d0d0;
-	width: 590px;
-	margin-bottom: -1px;
-}
-.icon-plus {
-	color: #5ec4cd;
-	margin-right: 20px;
-	font-size: 20px;
-	float:left;
-}
+	.togglefaq {
+		text-decoration: none;
+		color: #333;
+		font-size: 13px;
+		padding: 10px 30px;
+		line-height: 20px;
+		display: block;
+		border: 1px solid #d0d0d0;
+		width: 590px;
+		margin-bottom: -1px;
+	}
+	.icon-plus {
+		color: #5ec4cd;
+		margin-right: 20px;
+		font-size: 20px;
+		float:left;
+	}
 
-.icon-minus {
-	color: #5ec4cd;
-	margin-right: 20px;
-	font-size: 20px;
-	float:left;
-}
-p {
-  margin: 0;
-  padding-bottom: 20px;
-}
+	.icon-minus {
+		color: #5ec4cd;
+		margin-right: 20px;
+		font-size: 20px;
+		float:left;
+	}
+	p {
+	  margin: 0;
+	  padding-bottom: 20px;
+	}
 
 </style>
 
 <script type="text/javascript">
 	//faq toggle stuff 
-$('.togglefaq').click(function(e) {
-e.preventDefault();
-var notthis = $('.active').not(this);
-notthis.find('.icon-minus').addClass('icon-plus').removeClass('icon-minus');
-notthis.toggleClass('active').next('.faqanswer').slideToggle(300);
- $(this).toggleClass('active').next().slideToggle("fast");
-$(this).children('i').toggleClass('icon-plus icon-minus');
-});
+	$('.togglefaq').click(function(e) {
+	e.preventDefault();
+	var notthis = $('.active').not(this);
+	notthis.find('.icon-minus').addClass('icon-plus').removeClass('icon-minus');
+	notthis.toggleClass('active').next('.faqanswer').slideToggle(300);
+	 $(this).toggleClass('active').next().slideToggle("fast");
+	$(this).children('i').toggleClass('icon-plus icon-minus');
+	});
 </script>
 </body>
 </html>
