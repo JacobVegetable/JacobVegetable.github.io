@@ -1,271 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Random Math Function Generator</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.1/d3.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    h1 {
-      margin: 0;
-      font-size: 36px;
-      font-weight: normal;
-    }
-    
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      height: calc(100vh - 60px);
-    }
-    
-    form {
-      display: flex;
-      flex-direction: column;
-      margin-right: 50px;
-    }
-    
-    label {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    
-    input[type="range"] {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    
-    select {
-      width: 100%;
-      height: 30px;
-      margin-bottom: 20px;
-    }
-    
-    button {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    
-    canvas {
-      border: 1px solid #333;
-      margin-top: 20px;
-    }
-    
-    @media screen and (max-width: 768px) {
-      main {
-        height: auto;
-      }
-      
-      form {
-        margin-right: 0;
-        margin-bottom: 50px;
-      }
-    }
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FAQ</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Check your mental illness(TM)</h1>
-  </header>
-  <main>
-    <form>
-	<label for="pronoun-slider">Select your preferred pronoun:</label>
-	<input type="range" min="1" max="27" value="1" class="slider" id="pronoun-slider" list="pronoun-list">
-	<datalist id="pronoun-list">
-	  <option value="he/him">
-	  <option value="she/her">
-	  <option value="they/them">
-	  <option value="ze/hir">
-	  <option value="ey/em">
-	  <option value="fae/faer">
-	  <option value="ne/nem">
-	  <option value="ve/ver">
-	  <option value="xe/xem">
-	  <option value="ae/aer">
-	  <option value="per/pers">
-	  <option value="thou/thee">
-	  <option value="hither/thither">
-	  <option value="ye/you">
-	  <option value="we/us">
-	  <option value="peachy">
-	  <option value="quaffle">
-	  <option value="flibbertigibbet">
-	  <option value="gobbledygook">
-	  <option value="higgledy-piggledy">
-	  <option value="jabberwocky">
-	  <option value="kerfuffle">
-	  <option value="mumbo jumbo">
-	  <option value="nonsense">
-	  <option value="rigmarole">
-	  <option value="scuttlebutt">
-	  <option value="skedaddle">
-	</datalist>
-	<span id="chosen-pronoun">he/him</span>      
-<br>
-	<label for="star-sign-select">Select your star sign:</label>
-      <select id="star-sign-select">
-        <option value="Aries">Aries</option>
-        <option value="Taurus">Taurus</option>
-        <option value="Gemini">Gemini</option>
-        <option value="Cancer">Cancer</option>
-        <option value="Leo">Leo</option>
-        <option value="Virgo">Virgo</option>
-        <option value="Libra">Libra</option>
-        <option value="Scorpio">Scorpio</option>
-        <option value="Sagittarius">Sagittarius</option>
-        <option value="Capricorn">Capricorn</option>
-        <option value="Aquarius">Aquarius</option>
-        <option value="Pisces">Pisces</option>
-      </select>
-      <img src="https://i.redd.it/z4hqjrtjfvv01.png" height="48" id="generate-button"/>
-    </form>
-    <div id="chartSpace"></div>
-  </main>
-  <script type="text/javascript">
-  	const pronouns = [
-  "he/him",
-  "she/her",
-  "they/them",
-  "ze/hir",
-  "ey/em",
-  "fae/faer",
-  "ne/nem",
-  "ve/ver",
-  "xe/xem",
-  "ae/aer",
-  "per/pers",
-  "thou/thee",
-  "hither/thither",
-  "ye/you",
-  "we/us",
-  "peachy",
-  "quaffle",
-  "flibbertigibbet",
-  "gobbledygook",
-  "higgledy-piggledy",
-  "jabberwocky",
-  "kerfuffle",
-  "mumbo jumbo",
-  "nonsense",
-  "rigmarole",
-  "scuttlebutt",
-  "skedaddle"
-];
+	<h1>FAQ KINO</h1>
 
-const slider = document.getElementById("pronoun-slider");
-const output = document.getElementById("chosen-pronoun");
+    <a href="#" class="togglefaq">
+    	<i class="icon-plus">
+    		Na jaki film idziemy? xd
+    	</i> 
+    </a>
+    <div class="faqanswer">
+        <p>
+            Kot w butach 2 :D
+        </p>
+   	</div>
+   
+    <a href="#" class="togglefaq">
+    	<i class="icon-plus">
+    		Kiedy idziemy?
+    	</i> 
+    </a>
+    <div class="faqanswer">
+        <p>
+            25.02 (sobota), godzina 16:40
+        </p>
+   	</div>
 
-// Update the output element with the currently chosen pronoun
-output.innerHTML = pronouns[slider.value];
+    <a href="#" class="togglefaq">
+    	<i class="icon-plus">
+    		W którym kinie?
+    	</i> 
+    </a>
+    <div class="faqanswer">
+        <p>
+            Kino Helios w Galerii Handlowej Magnolia Park (Wrocław)
+        </p>
+   	</div>
 
-slider.oninput = function() {
-  // Update the output element with the currently chosen pronoun
-  output.innerHTML = pronouns[this.value];
-}
+    <a href="#" class="togglefaq">
+    	<i class="icon-plus">
+    		Ile to kosztuje?
+    	</i> 
+    </a>
+    <div class="faqanswer">
+        <p>
+            22.90 zł
+        </p>
+   	</div>
+<style type="text/css">
+		* {
+	  box-sizing: border-box;
+	  font-weight: bold;
+	}
+	.faqanswer {
+		display: none;
+		width: 590px;
+		background: #e5e5e5;
+		padding: 12px 20px 0 30px;	
+	}
 
-// Function to generate a random mathematical function based on the selected star sign
-function generateFunction(starSign) {
-  let func;
-  switch (starSign) {
-    case "Aries":
-      func = x => Math.sin(x);
-      break;
-    case "Taurus":
-      func = x => Math.cos(x);
-      break;
-    case "Gemini":
-      func = x => Math.tan(x);
-      break;
-    case "Cancer":
-      func = x => Math.pow(x, 2);
-      break;
-    case "Leo":
-      func = x => Math.sqrt(x);
-      break;
-    case "Virgo":
-      func = x => Math.abs(x);
-      break;
-    case "Libra":
-      func = x => Math.log(x);
-      break;
-    case "Scorpio":
-      func = x => Math.exp(x);
-      break;
-    case "Sagittarius":
-      func = x => Math.atan(x);
-      break;
-    case "Capricorn":
-      func = x => Math.cbrt(x);
-      break;
-    case "Aquarius":
-      func = x => Math.sinh(x);
-      break;
-    case "Pisces":
-      func = x => Math.cosh(x);
-      break;
-    default:
-      func = x => x;
-      break;
-  }
-  return func;
-}
+	.faqanswer p {
+		font-size: 30px;
+		line-height: 45px;	
+	}
 
 
-// Function to update the chart with a new mathematical function
-function updateChart() {
-  let starSign = document.getElementById("star-sign-select").value;
-  let func = generateFunction(starSign);
-  let pronoun = slider.value;
-  let x = [];
-  let y = [];
-  for (let i = 0; i <= Math.round(Math.random()*100) + 10; i++) {
-    x.push(i);
-    y.push(func(i) * Math.random() * pronoun);
-  }
-  let trace = {
-    x: x,
-    y: y,
-    type: 'scatter'
-  };
-  let data = [trace];
-  let layout = {
-    title: `Down Syndrome Chart(TM) for ${pronouns[pronoun]} with ${starSign} Sign`,
-    xaxis: {
-      title: 'X-axis'
-    },
-    yaxis: {
-      title: 'Y-axis'
-    }
-  };
-  Plotly.newPlot('chartSpace', data, layout);
-}
+	a.active {
+		font-weight: bold;
+	}
 
-// Add event listener to the generate button
-let generateButton = document.getElementById("generate-button");
-generateButton.addEventListener("click", updateChart);
+	.togglefaq {
+		text-decoration: none;
+		color: #333;
+		padding: 10px 30px;
+		font-size: 30px;
+		line-height: 45px;	
+		display: block;
+		border: 3px solid #d0d0d0;
+		width: 590px;
+		margin-bottom: 15px;
+	}
+	p {
+	  margin: 0;
+	  padding-bottom: 20px;
+	}
 
+</style>
 
-// Generate the initial chart on page load
-  </script>
+<script type="text/javascript">
+	//faq toggle stuff 
+	$('.togglefaq').click(function(e) {
+	e.preventDefault();
+	var notthis = $('.active').not(this);
+	notthis.find('.icon-minus').addClass('icon-plus').removeClass('icon-minus');
+	notthis.toggleClass('active').next('.faqanswer').slideToggle(300);
+	 $(this).toggleClass('active').next().slideToggle("fast");
+	$(this).children('i').toggleClass('icon-plus icon-minus');
+	});
+</script>
 </body>
 </html>
