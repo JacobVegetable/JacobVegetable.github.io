@@ -1,0 +1,125 @@
+<html><head><base href="https://Alicjo.czy/odpowiedz/moze-innym-razem"><title>Może innym razem - Rozumiemy, Alicjo!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  :root {
+    --primary-color: #6A5ACD;
+    --secondary-color: #E6E6FA;
+    --background-color: #F8F8FF;
+    --text-color: #4A4A4A;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: var(--text-color);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(106,90,205,0.4);
+  }
+
+  .calendar {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .calendar .month {
+    font-size: 0.5em;
+    margin-bottom: 10px;
+  }
+
+  .calendar .day {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .calendar {
+      width: 150px;
+      height: 150px;
+      font-size: 1.5em;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rozumiemy, Alicjo!</h1>
+    <div class="calendar">
+      <div class="month">Lipiec</div>
+      <div class="day">14</div>
+    </div>
+    <p>Nie ma problemu, że tym razem nie możesz. Może uda nam się umówić na inny termin?</p>
+    <a href="https://Alicjo.czy/zaplanuj-spotkanie" class="btn">Zaplanuj spotkanie</a>
+  </div>
+</body></html>

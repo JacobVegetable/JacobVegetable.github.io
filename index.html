@@ -1,101 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <meta name="description" content="Welcome to the portfolio website of Jakub Warzych. Explore my projects and learn more about me."/>
-    <meta name="keywords" content="Jakub Warzych, portfolio, projects, web development, Unity, C#, ASP.NET, PostgreSQL">
-    <meta name="author" content="Jakub Warzych">
-    <meta property="og:title" content="Home">
-    <meta property="og:description" content="Welcome to the portfolio website of Jakub Warzych. Explore my projects and learn more about me.">
-    <meta property="og:image" content="img/veggies.png">
-    <meta property="og:url" content="https://jacobvegetable.github.io/">
-    <meta name="google-site-verification" content="YDd0nOjRmy3H4WSK5lxBLb_cVu-t_WRidDbWRBmgGUo" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="Cyborg.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body style="margin-top: 0; position: relative; overflow: hidden;">
-    <div class="background-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-      <img src="img/veggies.png" alt="Veggies Background" style="width: 100%; height: 100%; object-fit: cover; filter: blur(5px);">
+<html><head><title>Alicjo, czy chcesz wyjść z nami na bubble tea?</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  :root {
+    --primary-color: #FF85A2;
+    --secondary-color: #FFC0CB;
+    --background-color: #FFF0F5;
+    --text-color: #4A4A4A;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,133,162,0.4);
+  }
+
+  .btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+
+  .bubble-tea-gif {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .bubble-tea-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .details {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .details p {
+    margin: 5px 0;
+    font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .bubble-tea-gif {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Alicjo, czy chcesz wyjść z nami na bubble tea?</h1>
+    <div class="bubble-tea-gif">
+      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGZkN2JiMGJkZTMwNTYwODFhYmZlMGE2YmYwYjZjYzZkMDQwZjk3NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/fAhZm9uRYJvjruuDwr/giphy.gif" alt="Cute Cat Drinking Bubble Tea Animation" width="200" height="200">
     </div>
-    <div class="container pt-5" style="position: relative; z-index: 1; max-width: 60%; margin: 0 auto; height: 100vh;">
-      <h1>Jakub Warzych</h1>
-      <ul class="nav nav-tabs mb-4" id="portfolioTabs" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="main-tab" data-toggle="tab" href="#main" role="tab" aria-controls="main" aria-selected="true">Main</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
-        </li>
-      </ul>
-      <div class="tab-content" id="portfolioTabContent" style="height: 100%;">
-        <div class="tab-pane fade show active" id="main" role="tabpanel" aria-labelledby="main-tab">
-          <h2>About Me</h2>
-          <p class="text-dark" style="font-size: 1.25em;">Heya! </br>My name is Jakub Warzych (eng: Jacob Vegetable).</p>
-          <p class="text-dark" style="font-size: 1.25em;">Check the projects tab to see what I'm currently working on.</p>
-        </div>
-        <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
-          <h2>Projects</h2>
-          <div class="accordion" id="projectsAccordion">
-            <div class="row justify-content-center">
-              <!-- Project 1 -->
-              <div class="col-5 mt-3 mr-4">
-                <div class="card">
-                  <div class="card-header d-flex justify-content-center" id="project1Heading">
-                    <h2 class="mb-0">
-                      <button class="btn" type="button" data-toggle="collapse" data-target="#project1Collapse" aria-expanded="true" aria-controls="project1Collapse">
-                        <h3>Vamps</h3>
-                        <span class="btn btn-secondary mr-2 mb-2">Video Game</span>
-                        <span class="btn btn-secondary mr-2 mb-2">Unity</span>
-                        <span class="btn btn-secondary mr-2 mb-2">C#</span>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="project1Collapse" class="collapse" aria-labelledby="project1Heading">
-                    <div class="card-body">
-                      <a href="img/vamps.png" target="_blank">
-                      <img src="img/vamps.png" class="card-img-top mb-3" alt="Project 1">
-                      </a>
-                      <p class="card-text mt-3">Video game based on the popular title "Vampire Survivors" designed using the Unity Game Engine for Windows devices.</p>
-                      <a href="#" class="btn btn-primary" disabled target="_blank">View Project</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Project 2 -->
-              <div class="col-5 mt-3 ml-4">
-                <div class="card">
-                  <div class="card-header d-flex justify-content-center" id="project2Heading">
-                    <h2 class="mb-0">
-                      <button class="btn" type="button" data-toggle="collapse" data-target="#project2Collapse" aria-expanded="true" aria-controls="project2Collapse">
-                        <h3>ShareAndSettle</h3>
-                        <span class="btn btn-secondary mr-2 mb-2">ASP.NET</span>
-                        <span class="btn btn-secondary mr-2 mb-2">PostgreSQL</span>
-                        <span class="btn btn-secondary mr-2 mb-2">C#</span>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="project2Collapse" class="collapse" aria-labelledby="project2Heading" data-parent="#projectsAccordion">
-                    <div class="card-body">
-                      <a href="img/split.png" target="_blank">
-                      <img src="img/split.png" class="card-img-top mb-3" alt="Project 2">
-                      </a>
-                      <p class="card-text mt-3">
-                        Website designed with the phrase "Money's the easiest thing to argue about" in mind. Its main purpose is to help people living together share expenses and settle up with each other.
-                      </p>
-                      <a href="https://shareandsettle.up.railway.app/" class="btn btn-primary" target="_blank">View Project</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <p>Hej Alicjo! Mamy nadzieję, że masz ochotę na pyszne bubble tea. Będzie słodko, kolorowo i super zabawnie!</p>
+    <div class="details">
+      <p>Kiedy? Dzisiaj!</p>
+      <p>Gdzie? Plac Grunwaldzki</p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+    <div class="btn-container">
+      <a href="tak.html" class="btn">Tak, chętnie!</a>
+      <a href="nie.html" class="btn btn-secondary">Może innym razem</a>
+    </div>
+  </div>
+</body></html>

@@ -1,0 +1,144 @@
+<html><head><base href="https://Alicjo.czy/odpowiedz/tak"><title>Hurra! Idziemy na bubble tea!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  :root {
+    --primary-color: #FF85A2;
+    --secondary-color: #FFC0CB;
+    --background-color: #FFF0F5;
+    --text-color: #4A4A4A;
+    --accent-color: #FFD700;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: var(--text-color);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,133,162,0.4);
+  }
+
+  .celebration {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: bounce 0.5s ease infinite alternate;
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
+
+  .bubble-tea {
+    width: 100px;
+    height: 150px;
+    background-color: #8A2BE2;
+    border-radius: 0 0 50px 50px;
+    position: relative;
+    margin: 20px auto;
+  }
+
+  .straw {
+    width: 20px;
+    height: 170px;
+    background-color: var(--accent-color);
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    transform: rotate(-10deg);
+  }
+
+  .bubbles {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .bubble {
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    animation: rise 3s infinite ease-in;
+  }
+
+  .bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .bubble:nth-child(2) { left: 30%; animation-delay: 0.5s; }
+  .bubble:nth-child(3) { left: 50%; animation-delay: 1s; }
+  .bubble:nth-child(4) { left: 70%; animation-delay: 1.5s; }
+
+  @keyframes rise {
+    0% { bottom: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { bottom: 100px; opacity: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="celebration">🎉</div>
+    <h1>Hurra! Idziemy na bubble tea!</h1>
+    <div class="bubble-tea">
+      <div class="straw"></div>
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    <p>Super, Alicjo! Nie możemy się doczekać wspólnego wyjścia. <br><br>Spotkajmy się o 16:00 na Placu Grunwaldzkim :D.</p>
+    <a href="" class="btn">Zobacz mapę</a>
+  </div>
+</body></html>
